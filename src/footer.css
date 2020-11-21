@@ -1,0 +1,96 @@
+.footerbackground {
+	width: 100%;
+	background-color: #282828;
+}
+.footer {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	bottom: 0;
+	height: 50px;
+	width: 97%;
+	background-color: #282828;
+	padding: 20px;
+	border-top: 1px solid #000;
+}
+
+/* LEFT FOOTER */
+
+.footer__left {
+	flex: 0.3;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	max-width: 200px;
+}
+
+.footer__albumLogo {
+	height: 60px;
+	width: 60px;
+	margin-right: 10px;
+	object-fit: contain;
+}
+
+/* CENTER FOOTER */
+
+.footer__center {
+	flex: 0.4;
+	padding: 0px 100px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-width: 200px;
+	max-width: 300px;
+}
+
+.footer__green {
+	color: #1db954;
+}
+
+.footer__green:hover,
+.footer__icon:hover {
+	transition: transform 200ms ease-in-out;
+	transform: scale(1.15);
+}
+
+/* RIGHT FOOTER */
+
+.footer__right {
+	flex: 0.3;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-width: 120px;
+	max-width: 250px;
+}
+
+.footer__right .MuiSlider-track {
+	color: #1db954;
+	height: 4px;
+	border-radius: 8px;
+}
+
+.footer__right .MuiSlider-rail {
+	color: grey;
+	height: 4px;
+	border-radius: 8px;
+}
+
+.footer__right .MuiSlider-thumb {
+	width: 10px;
+	height: 10px;
+	margin-top: -3px;
+	color: #fff;
+	box-shadow: none;
+}
+
+.footer__right .MuiSlider-thumb:hover,
+.footer__right .MuiSlider-thumb:active,
+.footer__right .MuiSlider-thumb:focus {
+	box-shadow: none;
+	transition: transform 200ms ease-in-out;
+	transform: scale(1.2);
+}
