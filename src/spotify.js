@@ -7,13 +7,12 @@ const redirectURI = "http://localhost:3000/";
 const clientId = "85622a3abcc941a4838bf1c31e3f4cf0";
 
 const scopes = [
+	"playlist-read-private",
 	"user-read-currently-playing",
 	"user-read-recently-played",
 	"user-read-playback-state",
 	"user-top-read",
 	"user-modify-playback-state",
-	"playlist-read-private",
-	"playlist-read-collaborative",
 ];
 
 export const getTokenFromUrl = () => {
@@ -27,8 +26,6 @@ export const getTokenFromUrl = () => {
 		}, {});
 };
 
-const loginUrl = `${authEndpoint}?response_type=token&client_id=${clientId}&scope=${scopes.join(
+export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectURI}&scope=${scopes.join(
 	"%20"
-)}&redirect_uri=${redirectURI}&show_dialog=true`;
-
-export default loginUrl;
+)}&response_type=token&show_dialog=true`;

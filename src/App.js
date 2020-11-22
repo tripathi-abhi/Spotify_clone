@@ -10,19 +10,17 @@ const spotify = new SpotifyWebApi();
 
 function App() {
 	//
-	const [{ user, token }, dispatch] = useDataLayerValue();
+	const [{ token }, dispatch] = useDataLayerValue();
 	useEffect(() => {
 		const hash = getTokenFromUrl();
-		window.location.hash = "";
 		const _token = hash.access_token;
-
+		window.location.hash = "";
 		if (_token) {
+			spotify.setAccessToken(_token);
 			dispatch({
 				type: "SET_TOKEN",
 				token: _token,
 			});
-
-			spotify.setAccessToken(_token);
 
 			// get  user details
 
@@ -52,9 +50,7 @@ function App() {
 				});
 			});
 		}
-	}, []);
-
-	console.log("Person : ", user);
+	}, [token, dispatch]);
 
 	return (
 		<div className="App">

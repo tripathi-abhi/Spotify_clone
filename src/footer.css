@@ -22,7 +22,8 @@
 	display: flex;
 	align-items: center;
 	color: #fff;
-	max-width: 200px;
+	max-width: 300px;
+	white-space: nowrap;
 }
 
 .footer__albumLogo {
@@ -30,6 +31,23 @@
 	width: 60px;
 	margin-right: 10px;
 	object-fit: contain;
+}
+
+.footer_songInfo > strong {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.footer_songInfo > p {
+	font-size: 13px;
+	color: #ffffffb3;
+}
+
+.footer_songInfo > strong:hover,
+.footer_songInfo > p:hover {
+	color: #fff;
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 /* CENTER FOOTER */
